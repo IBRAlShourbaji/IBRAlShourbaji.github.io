@@ -69,7 +69,61 @@
         margin-bottom: 5px;
        font-size: 1.05em;
        }
-                
+         .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.tablink {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s;
+}
+
+.tablink:hover {
+    color: #000;
+}
+
+.tablink.active {
+    color: #2c7be5;
+    border-bottom: 3px solid #2c7be5;
+    font-weight: 600;
+}
+
+.tabcontent {
+    display: none;
+    padding: 10px 0;
+    animation: fade 0.3s ease-in-out;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.project-card {
+    background: #f8f9fa;
+    padding: 15px 18px;
+    margin-bottom: 12px;
+    border-left: 4px solid #2c7be5;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateX(5px);
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}       
         header {
             margin-top: 60px; /* space above image */
             margin-bottom: 10px;
@@ -258,7 +312,7 @@
         <li>Deep Learning & Neural Networks</li>
         <li>Metaheuristic Optimization Algorithms</li>
         <li>Computational Intelligence Systems</li>
-        <li>Signal Processing & & Solar Radiation Applications</li>
+        <li>Signal Processing & Solar Radiation Applications</li>
     </ul>
 </div>
 <div class="section">
@@ -270,83 +324,57 @@
         <li>Deep Learning for Real-World Engineering Problems</li>
     </ul>
 </div>
-<!-- Publications -->
 <div class="section">
-    <h2>Publications</h2>
-    <ul>
-        <li>
-            Kachare, P., Puri, D., Sangle, S. B., <strong>Al-Shourbaji</strong>, I., Jabbari, A., Kirner, R., et al. 
-            <br>
-            <em>LCADNet: a novel light CNN architecture for EEG-based Alzheimer disease detection.</em> 
-            <br>
-            <span>Physical and Engineering Sciences in Medicine (2024).</span>
-            <a href="https://doi.org/10.1007/s13246-024-01425-w" target="_blank">https://doi.org/10.1007/s13246-024-01425-w</a>
-        </li>
-        <li>
-            Puri, D. V., Kachare, P. H., Sangle, S. B., Kirner, R., Jabbari, A., <strong>Al-Shourbaji</strong>, I., et al.
-            <br>
-            <em>LEADNet: Detection of Alzheimer’s Disease using Spatiotemporal EEG Analysis and Low-Complexity CNN.</em> 
-            <br>
-            <span>IEEE Access (2024).</span>
-            <a href="https://doi.org/10.1109/ACCESS.2024.3435768" target="_blank">https://doi.org/10.1109/ACCESS.2024.3435768</a>
-        </li>
-        <li>
-            <strong>AlShourbaji</strong>, I., Helian, N., Sun, Y., Hussien, A. G., Abualigah, L., & Elnaim, B. 
-            <br>
-            <em>An efficient churn prediction model using gradient boosting machine and metaheuristic optimization.</em>
-            <br>
-            <span>Scientific Reports, 13(1), 14441 (2023).</span>
-            <a href="https://doi.org/10.1038/s41598-023-41093-6" target="_blank">https://doi.org/10.1038/s41598-023-41093-6</a>
-        </li>
-        <li>
-            <strong>Al-Shourbaji</strong>, I., & Duraibi, S. 
-            <br>
-            <em>IWQP4Net: An Efficient Convolution Neural Network for Irrigation Water Quality Prediction.</em> 
-            <br>
-            <span>Water, 15(9), 1657 (2023).</span>
-            <a href="https://doi.org/10.3390/w15091657" target="_blank">https://doi.org/10.3390/w15091657</a>
-        </li>
-        <li>
-            <strong>Al-Shourbaji</strong>, I., Kachare, P. H., Alshathri, S., Duraibi, S., Elnaim, B., & Abd Elaziz, M. 
-            <br>
-            <em>An efficient parallel reptile search algorithm and snake optimizer approach for feature selection.</em>
-            <br>
-            <span>Mathematics, 10(13), 2351 (2022).</span>
-            <a href="https://doi.org/10.3390/math10132351" target="_blank">https://doi.org/10.3390/math10132351</a>
-        </li>
-        <li>
-            <strong>Al-Shourbaji</strong>, I., Helian, N., Sun, Y., Alshathri, S., & Abd Elaziz, M.
-            <br>
-            <em>Boosting ant colony optimization with reptile search algorithm for churn prediction.</em>
-            <br>
-            <span>Mathematics, 10(7), 1031 (2022).</span>
-            <a href="https://doi.org/10.3390/math10071031" target="_blank">https://doi.org/10.3390/math10071031</a>
-        </li>
-        <li>
-            <strong>Al-Shourbaji</strong>, I., Kachare, P., Fadlelseed, S., Jabbari, A., Hussien, A. G., Al-Saqqar, F., et al.
-            <br>
-            <em>Artificial Ecosystem-Based Optimization with Dwarf Mongoose Optimization for Feature Selection and Global Optimization Problems.</em> 
-            <br>
-            <span>International Journal of Computational Intelligence Systems, 16(1), 1-24 (2023).</span>
-            <a href="https://doi.org/10.1007/s44196-023-00279-6" target="_blank">https://doi.org/10.1007/s44196-023-00279-6</a>
-        </li>
-        <li>
-            <strong>Al-Shourbaji</strong>, I., Kachare, P. H., Abualigah, L., Abdelhag, M. E., Elnaim, B., Anter, A. M., & Gandomi, A. H.
-            <br>
-            <em>A deep batch normalized convolution approach for improving COVID-19 detection from chest X-ray images.</em>
-            <br>
-            <span>Pathogens, 12(1), 17 (2022).</span>
-            <a href="https://doi.org/10.3390/pathogens12010017" target="_blank">https://doi.org/10.3390/pathogens12010017</a>
-        </li>
-        <li>
-            <strong>AlShourbaji</strong>, I., Kachare, P., Zogaan, W., Muhammad, L. J., & Abualigah, L.
-            <br>
-            <em>Learning features using an optimized artificial neural network for breast cancer diagnosis.</em>
-            <br>
-            <span>SN Computer Science, 3(3), 229 (2022).</span>
-            <a href="https://doi.org/10.1007/s42979-022-01129-6" target="_blank">https://doi.org/10.1007/s42979-022-01129-6</a>
-        </li>
-    </ul>
+    <h2>Research</h2>
+
+    <!-- Tabs -->
+    <div class="tabs">
+        <button class="tablink active" onclick="openTab(event, 'network')">🌐 Network</button>
+        <button class="tablink" onclick="openTab(event, 'projects')">🛠 Projects</button>
+        <button class="tablink" onclick="openTab(event, 'output')">📄 Research Output</button>
+    </div>
+
+    <!-- 🌐 Network -->
+    <div id="network" class="tabcontent" style="display:block;">
+        <h3>Network</h3>
+        <p>Academic collaborations and research partnerships.</p>
+    </div>
+
+    <!-- 🛠 Projects -->
+    <div id="projects" class="tabcontent">
+
+        <h3>Projects</h3>
+
+        <div class="project-card">
+            <h4>AI Models for Healthcare</h4>
+            <p>EEG, COVID-19, Cancer Detection applications.</p>
+        </div>
+
+        <div class="project-card">
+            <h4>Feature Selection Systems</h4>
+            <p>Evolutionary and metaheuristic optimization methods.</p>
+        </div>
+
+        <div class="project-card">
+            <h4>Deep Learning Engineering Systems</h4>
+            <p>Real-world AI solutions for engineering problems.</p>
+        </div>
+
+    </div>
+
+    <!-- 📄 Research Output -->
+    <div id="output" class="tabcontent">
+
+        <h3>Research Output</h3>
+
+        <ul>
+            <li>LCADNet – EEG Alzheimer detection (2024)</li>
+            <li>LEADNet – Spatiotemporal EEG analysis (IEEE Access 2024)</li>
+            <li>Churn prediction with optimization (Scientific Reports 2023)</li>
+            <li>Feature selection using metaheuristics (Mathematics 2022)</li>
+        </ul>
+
+    </div>
 </div>
 </body>
 </html>
