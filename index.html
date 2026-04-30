@@ -6,51 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Al-Shourbaji Page</title>
 
-    <!-- icons -->
+    <!-- Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Ibrahim Al-Shourbaji",
-  "url": "https://ibralshourbaji.github.io/",
-  "image": [ 
-    "https://raw.githubusercontent.com/IBRAlShourbaji/IBRAlShourbaji.github.io/refs/heads/main/ibrahim2.jpg",
-    "https://ieeexplore.ieee.org/mediastore/IEEE/content/freeimages/6287639/10380310/10614604/alsho-3435768-small.gif",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhJ5ZmrfifGybpgxWawtHiHxm2qRmKWpgnbw&s"
-  ],
-  "jobTitle": "Researcher",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Jazan University, Department of Electronic and Electrical Engineering",
-    "url": "https://www.jazanu.edu.sa"
-  },
-  "affiliation": {
-    "@type": "Organization",
-    "name": "Jazan University"
-  },
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "Jazan University",
-    "url": "https://www.jazanu.edu.sa/en"
-  },
-  "description": "Ibrahim Al-Shourbaji received the Ph.D. degree from the University of Hertfordshire, U.K. He holds an associate position with the Department of Electrical and Electronics Engineering, Jazan University, Saudi Arabia. He has published several journal papers, conferences, and books. His main research interests include computational intelligence, metaheuristic algorithms, signal processing, deep learning, robotics, and optimization. He serves as a reviewer for many prestigious journals in Elsevier, Springer, and IEEE.",
-  "sameAs": [
-    "https://scholar.google.com/citations?user=T4jhEMQAAAAJ&hl=en",
-    "https://www.researchgate.net/profile/Ibrahim-Alshourbaji-2",
-    "https://orcid.org/0000-0002-6458-8415",
-    "https://github.com/IBRAJShourbaji",
-    "https://www.linkedin.com/in/ibrahim-alshourbaji-6a0666199/?originalSubdomain=sa"
-  ]
-}
-</script>
+    <!-- Cytoscape -->
+    <script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
 
-    <!-- Basic CSS styling -->
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ibrahim Al-Shourbaji",
+      "url": "https://ibralshourbaji.github.io/",
+      "jobTitle": "Researcher"
+    }
+    </script>
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -59,73 +34,18 @@
             background-color: #f5f7fb;
             color: #333;
             text-align: center;
-            
         }
-           .social-icons {
-           margin-top: 15px;
-         }
+
+        .social-icons { margin-top: 15px; }
+
         .subtitle {
-        margin-top: 10px;   /* ينزلها لتحت */
-        margin-bottom: 5px;
-       font-size: 1.05em;
-       }
-         .tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    border-bottom: 2px solid #ddd;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-}
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-size: 1.05em;
+        }
 
-.tablink {
-    background: none;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 15px;
-    color: #666;
-    border-bottom: 3px solid transparent;
-    transition: 0.3s;
-}
-
-.tablink:hover {
-    color: #000;
-}
-
-.tablink.active {
-    color: #2c7be5;
-    border-bottom: 3px solid #2c7be5;
-    font-weight: 600;
-}
-
-.tabcontent {
-    display: none;
-    padding: 10px 0;
-    animation: fade 0.3s ease-in-out;
-}
-
-@keyframes fade {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-.project-card {
-    background: #f8f9fa;
-    padding: 15px 18px;
-    margin-bottom: 12px;
-    border-left: 4px solid #2c7be5;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-.project-card:hover {
-    transform: translateX(5px);
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}       
         header {
-            margin-top: 60px; /* space above image */
+            margin-top: 60px;
             margin-bottom: 10px;
         }
 
@@ -137,244 +57,181 @@
             margin-bottom: 15px;
         }
 
-        h1 {
-            font-size: 2em;
-            font-weight: 700;
-            margin: 0;
-            color: #333;
+        h1 { font-size: 2em; margin: 0; }
+
+        .section {
+            text-align: left;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        p {
-            margin: 5px 0 20px;
-            color: #555;
-        }
-
-        .buttons {
+        .tabs {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 10px;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 20px;
             flex-wrap: wrap;
         }
 
-        .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 12px 24px;
-            font-size: 1em;
-            font-weight: 500;
-            color: #333;
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .button i {
-            font-size: 1.2em;
-        }
-
-        .button:hover {
-            background-color: #2563eb;
-            color: #fff;
-            border-color: #0073e6;
-            box-shadow: 0 8px 18px rgba(0, 115, 230, 0.25);
-            transform: translateY(-2px);
-        }
-
-        /* Toolbar Styling */
-        .toolbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #f8f9fa;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .toolbar .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-
-        .toolbar .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-size: 1em;
-            font-weight: 500;
-        }
-
-        .toolbar .nav-links a:hover {
-            color: #0073e6;
-        }                    
-
-        .toolbar .connect-button {
-            padding: 8px 20px;
-            background-color: #28a745;
-            color: #fff;
-            font-size: 1em;
-            font-weight: 500;
-            text-decoration: none;
+        .tablink {
+            background: none;
             border: none;
-            border-radius: 20px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            padding: 10px 15px;
+            cursor: pointer;
+            color: #666;
         }
 
-        .toolbar .connect-button:hover {
-            background-color: #218838;
-            transform: translateY(-2px);
+        .tablink.active {
+            color: #2c7be5;
+            border-bottom: 3px solid #2c7be5;
+            font-weight: bold;
         }
 
-        .section {
-           text-align: left;
-           max-width: 800px;
-           margin: 20px auto;
-           background: #ffffff;
-           padding: 20px;
-           border-radius: 12px;
-           box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      }
+        .tabcontent { display: none; }
 
-        .section h2 {
-            font-size: 1.8em;
+        .project-card {
+            background: #f8f9fa;
+            padding: 15px;
             margin-bottom: 10px;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
+            border-left: 4px solid #2c7be5;
+            border-radius: 10px;
         }
 
-        .section p, .section ul {
-            line-height: 1.6;
-            margin: 10px 0;
-        }
-
-        .section ul {
-            list-style: disc; /* Changed to include dots */
-            padding-left: 20px;
-        }
-
-        .section li {
-            margin-bottom: 15px;
-        }
-
-        .section a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-
-        .section a:hover {
-            text-decoration: underline;
+        #cy {
+            width: 100%;
+            height: 500px;
+            background: #fff;
+            border-radius: 12px;
         }
     </style>
 </head>
+
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <img src="ibrahim2.jpg" alt="Profile Picture" class="profile-image">
-        <h1> Dr. Ibrahim Al-Shourbaji</h1>
-        <div class="social-icons">
-        <a href="mailto:alshourbajiibrahim@gmail.com" title="Email">
-        <i class="fas fa-envelope"></i>
-        </a>
+<header>
+    <img src="ibrahim2.jpg" class="profile-image">
+    <h1>Dr. Ibrahim Al-Shourbaji</h1>
 
-        <a href="https://scholar.google.com/citations?user=T4jhEMQAAAAJ&hl=en" target="_blank" title="Google Scholar">
-        <i class="fas fa-graduation-cap"></i>
-        </a>
-
-        <a href="https://orcid.org/0000-0002-6458-8415" target="_blank" title="ORCID">
-        <i class="fas fa-id-badge"></i>
-        </a>
-
-        <a href="https://github.com/IBRAlShourbaji" target="_blank" title="GitHub">
-        <i class="fab fa-github"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/ibrahim-alshourbaji-6a0666199/" target="_blank" title="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-        </a>
-        </div>
-        <p class="subtitle"><b> AI-driven Optimization for Complex Systems & Biomedical Signal Analysis</b></p>
-        <p>Jazan University, Saudi Arabia</p>
-        </header>
-    <!-- About Section -->
-    <div class="section">
-        <h2>About</h2>
-        <p>Ibrahim AlShourbaji received the Ph.D. degree from the University of Hertfordshire, U.K. He holds an associate position with the Department of Electrical and Electronics Engineering, Jazan University, Saudi Arabia. He has published several journal papers, conferences, and books. His main research interests include computational intelligence, metaheuristic algorithms, signal processing, deep learning, robotics, and optimization. He serves as a reviewer for many prestigious journals in Elsevier, Springer, and IEEE.</p>
+    <div class="social-icons">
+        <a href="mailto:alshourbajiibrahim@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://scholar.google.com"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://github.com"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
     </div>
-    <!-- Research Focus -->
-<div class="section">
-    <h2>Research Focus & Expertise</h2>
-    <ul>
-        <li>Artificial Intelligence & Machine Learning</li>
-        <li>Deep Learning & Neural Networks</li>
-        <li>Metaheuristic Optimization Algorithms</li>
-        <li>Computational Intelligence Systems</li>
-        <li>Signal Processing & Solar Radiation Applications</li>
-    </ul>
-</div>
-<div class="section">
-    <h2>Key Contributions</h2>
-    <ul>
-        <li>Development of Hybrid Metaheuristic Optimization Algorithms</li>
-        <li>AI Models for Healthcare Applications (EEG, COVID-19, Cancer Detection)</li>
-        <li>Feature Selection using Evolutionary Algorithms</li>
-        <li>Deep Learning for Real-World Engineering Problems</li>
-    </ul>
-</div>
-<div class="section">
-    
 
-    <!-- Tabs -->
+    <p class="subtitle"><b>AI-driven Optimization & Biomedical Signal Analysis</b></p>
+    <p>Jazan University, Saudi Arabia</p>
+</header>
+
+<!-- ABOUT -->
+<div class="section">
+    <h2>About</h2>
+    <p>Researcher in AI, Deep Learning, and Optimization.</p>
+</div>
+
+<!-- OUTPUT -->
+<div class="section">
+
     <div class="tabs">
-        <button class="tablink active" onclick="openTab(event, 'network')">🌐 Network</button>
-        <button class="tablink" onclick="openTab(event, 'projects')">🛠 Projects</button>
-        <button class="tablink" onclick="openTab(event, 'output')">📄 Research Output</button>
+        <button class="tablink active" onclick="openTab(event,'network')">Network</button>
+        <button class="tablink" onclick="openTab(event,'projects')">Projects</button>
+        <button class="tablink" onclick="openTab(event,'output')">Output</button>
     </div>
 
-    <!-- 🌐 Network -->
+    <!-- NETWORK -->
     <div id="network" class="tabcontent" style="display:block;">
-        <h3>Network</h3>
-        <p>Academic collaborations and research partnerships.</p>
+        <div id="cy"></div>
     </div>
 
-    <!-- 🛠 Projects -->
+    <!-- PROJECTS -->
     <div id="projects" class="tabcontent">
-
-        <h3>Projects</h3>
-
-        <div class="project-card">
-            <h4>AI Models for Healthcare</h4>
-            <p>EEG, COVID-19, Cancer Detection applications.</p>
-        </div>
-
-        <div class="project-card">
-            <h4>Feature Selection Systems</h4>
-            <p>Evolutionary and metaheuristic optimization methods.</p>
-        </div>
-
-        <div class="project-card">
-            <h4>Deep Learning Engineering Systems</h4>
-            <p>Real-world AI solutions for engineering problems.</p>
-        </div>
-
+        <div class="project-card">AI Healthcare Models</div>
+        <div class="project-card">Feature Selection Systems</div>
+        <div class="project-card">Deep Learning Systems</div>
     </div>
 
-    <!-- 📄 Research Output -->
+    <!-- OUTPUT -->
     <div id="output" class="tabcontent">
-
-        <h3>Research Output</h3>
-
         <ul>
             <li>LCADNet – EEG Alzheimer detection (2024)</li>
-            <li>LEADNet – Spatiotemporal EEG analysis (IEEE Access 2024)</li>
-            <li>Churn prediction with optimization (Scientific Reports 2023)</li>
-            <li>Feature selection using metaheuristics (Mathematics 2022)</li>
+            <li>LEADNet – EEG analysis (2024)</li>
+            <li>Churn prediction (2023)</li>
+            <li>Feature selection (2022)</li>
         </ul>
-
     </div>
 </div>
+
+<!-- NETWORK SCRIPT (FIXED PLACE) -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    window.cy = cytoscape({
+        container: document.getElementById('cy'),
+
+        elements: [
+            { data: { id: 'me', label: 'Ibrahim', year: 2026 } },
+            { data: { id: 'ai', label: 'AI', year: 2026 } },
+            { data: { id: 'dl', label: 'Deep Learning', year: 2025 } },
+            { data: { id: 'opt', label: 'Optimization', year: 2024 } },
+
+            { data: { source: 'me', target: 'ai' } },
+            { data: { source: 'me', target: 'dl' } },
+            { data: { source: 'me', target: 'opt' } }
+        ],
+
+        style: [
+            {
+                selector: 'node',
+                style: {
+                    label: 'data(label)',
+                    'text-valign': 'center',
+                    'text-halign': 'center',
+                    'background-color': '#fff',
+                    'border-width': 2,
+                    'border-color': '#999',
+                    width: 45,
+                    height: 45
+                }
+            },
+            {
+                selector: 'node[id="me"]',
+                style: {
+                    width: 65,
+                    height: 65,
+                    'background-color': '#f3f4f6'
+                }
+            },
+            {
+                selector: 'edge',
+                style: {
+                    width: 1,
+                    'line-color': '#d1d5db'
+                }
+            }
+        ],
+
+        layout: {
+            name: 'cose',
+            animate: true,
+            padding: 20
+        }
+    });
+
+    // Tabs
+    window.openTab = function(evt, tab) {
+        document.querySelectorAll('.tabcontent').forEach(t => t.style.display='none');
+        document.querySelectorAll('.tablink').forEach(b => b.classList.remove('active'));
+        document.getElementById(tab).style.display='block';
+        evt.currentTarget.classList.add('active');
+    };
+
+});
+</script>
+
 </body>
 </html>
