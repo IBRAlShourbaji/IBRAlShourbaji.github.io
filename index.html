@@ -1,151 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="mjV_SxjFsfgsoR0WrVkhat2NnZsAcQurXC4Qi2qNEpo" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahim Al-Shourbaji Page</title>
+<meta name="google-site-verification" content="mjV_SxjFsfgsoR0WrVkhat2NnZsAcQurXC4Qi2qNEpo" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ibrahim Al-Shourbaji Page</title>
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
+<!-- icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            background: #f5f7fb;
-            color: #333;
-            text-align: center;
-        }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-        header {
-            margin-top: 60px;
-        }
+<!-- Cytoscape -->
+<script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
 
-        .profile-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ibrahim Al-Shourbaji",
+  "url": "https://ibralshourbaji.github.io/",
+  "jobTitle": "Researcher",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Jazan University"
+  }
+}
+</script>
 
-        .social-icons a {
-            margin: 0 8px;
-            color: #333;
-            font-size: 18px;
-        }
+<style>
+body{
+    font-family:'Roboto',sans-serif;
+    margin:0;
+    background:#f5f7fb;
+    text-align:center;
+    color:#333;
+}
 
-        .subtitle {
-            font-size: 1.05em;
-            margin-top: 10px;
-        }
+header{margin-top:60px;}
 
-        .section {
-            max-width: 850px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            text-align: left;
-        }
+.profile-image{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+}
 
-        .tabs {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
+.section{
+    max-width:800px;
+    margin:20px auto;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    text-align:left;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
 
-        .tablink {
-            border: none;
-            background: none;
-            cursor: pointer;
-            padding: 10px 15px;
-            font-weight: 500;
-        }
+.tabs{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin:20px 0;
+}
 
-        .tabcontent { display: none; }
+.tabcontent{display:none;}
 
-        #cy {
-            width: 100%;
-            height: 500px;
-            background: #fff;
-            border-radius: 12px;
-        }
-    </style>
+#cy{
+    width:100%;
+    height:500px;
+    background:#fff;
+    border-radius:12px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <img src="https://raw.githubusercontent.com/IBRAlShourbaji/IBRAlShourbaji.github.io/main/ibrahim2.jpg" class="profile-image">
-
+    <img src="ibrahim2.jpg" class="profile-image">
     <h1>Dr. Ibrahim Al-Shourbaji</h1>
 
-    <div class="social-icons">
-        <a href="mailto:alshourbajiibrahim@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://scholar.google.com"><i class="fas fa-graduation-cap"></i></a>
-        <a href="https://github.com"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
-    </div>
-
-    <p class="subtitle"><b>AI-driven Optimization & Biomedical Signal Analysis</b></p>
+    <p><b>AI-driven Optimization & Biomedical Signal Analysis</b></p>
 </header>
 
 <!-- ABOUT -->
 <div class="section">
-    <h2>About</h2>
-    <p>
-        Ibrahim AlShourbaji received the Ph.D. degree from the University of Hertfordshire, U.K.
-        He is currently with Jazan University. His research includes AI, deep learning, optimization.
-    </p>
+<h2>About</h2>
+<p>
+Ibrahim AlShourbaji is a researcher at Jazan University working in AI, optimization, and deep learning.
+</p>
 </div>
 
-<!-- TABS -->
+<!-- RESEARCH OUTPUT (FIXED PLACE) -->
 <div class="section">
-
-    <div class="tabs">
-        <button class="tablink" onclick="showTab('network')">🌐 Network</button>
-        <button class="tablink" onclick="showTab('projects')">🛠 Projects</button>
-        <button class="tablink" onclick="showTab('output')">📄 Research Output</button>
-    </div>
-
-    <div id="network" class="tabcontent" style="display:block;">
-        <div id="cy"></div>
-    </div>
-
-    <div id="projects" class="tabcontent">
-        <h3>Projects</h3>
-        <ul>
-            <li>AI Models for Healthcare</li>
-            <li>Feature Selection Systems</li>
-            <li>Deep Learning Applications</li>
-        </ul>
-    </div>
-
-    <div id="output" class="tabcontent">
-        <h3>Research Output</h3>
-        <ul>
-            <li>LCADNet – EEG Alzheimer detection (2024)</li>
-            <li>LEADNet – Spatiotemporal EEG analysis (IEEE Access 2024)</li>
-            <li>Churn prediction (Scientific Reports 2023)</li>
-            <li>Feature selection (Mathematics 2022)</li>
-        </ul>
-    </div>
-
+<h2>Research Output</h2>
+<ul>
+    <li>LCADNet – EEG Alzheimer detection (2024)</li>
+    <li>LEADNet – EEG analysis (IEEE Access 2024)</li>
+    <li>Churn prediction optimization (2023)</li>
+    <li>Feature selection metaheuristics (2022)</li>
+</ul>
 </div>
-
-<script>
-function showTab(id){
-    document.querySelectorAll('.tabcontent').forEach(e=>e.style.display='none');
-    document.getElementById(id).style.display='block';
-}
-</script>
 
 <!-- NETWORK -->
+<div class="section">
+<h2>Network</h2>
+<div id="cy"></div>
+</div>
+
+<!-- SCRIPT (CORRECT PLACE ONLY) -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -171,8 +136,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     'background-color': '#fff',
                     'border-width': 2,
                     'border-color': '#999',
-                    width: 45,
-                    height: 45
+                    width: 40,
+                    height: 40
                 }
             },
             {
