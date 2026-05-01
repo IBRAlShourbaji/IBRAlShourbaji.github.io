@@ -1,76 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="mjV_SxjFsfgsoR0WrVkhat2NnZsAcQurXC4Qi2qNEpo" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrahim Al-Shourbaji Page</title>
+
+    <!-- icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Cytoscape -->
+    <script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ibrahim Al-Shourbaji",
+      "url": "https://ibralshourbaji.github.io/",
+      "jobTitle": "Researcher",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Jazan University"
+      }
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fb;
+            text-align: center;
+            color: #333;
+        }
+
+        header {
+            margin-top: 60px;
+        }
+
+        .profile-image {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        h1 { margin: 10px 0; }
+
+        .subtitle {
+            margin-top: 10px;
+            font-size: 1.05em;
+        }
+
+        .social-icons a {
+            margin: 0 8px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .section {
+            text-align: left;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tablink {
+            border: none;
+            background: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .tabcontent { display: none; }
+
+        #cy {
+            width: 100%;
+            height: 450px;
+            background: #fff;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="ibrahim2.jpg" class="profile-image">
+    <h1>Dr. Ibrahim Al-Shourbaji</h1>
+
+    <div class="social-icons">
+        <a href="mailto:alshourbajiibrahim@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://scholar.google.com"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://github.com"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <p class="subtitle"><b>AI-driven Optimization & Biomedical Signal Analysis</b></p>
+</header>
+
 <!-- ABOUT -->
 <div class="section">
     <h2>About</h2>
     <p>
-        Ibrahim AlShourbaji received the Ph.D. degree from the University of Hertfordshire, U.K. 
-        He holds an associate position with the Department of Electrical and Electronics Engineering, 
-        Jazan University, Saudi Arabia. He has published several journal papers, conferences, and books.
+        Ibrahim AlShourbaji received the Ph.D. degree from the University of Hertfordshire, U.K.
+        He is currently with Jazan University. His research includes AI, optimization, and deep learning.
     </p>
 </div>
 
-<!-- RESEARCH FOCUS -->
+<!-- OUTPUT (FIXED HERE) -->
 <div class="section">
-    <h2>Research Focus & Expertise</h2>
+    <h2>Research Output</h2>
     <ul>
-        <li>Artificial Intelligence & Machine Learning</li>
-        <li>Deep Learning & Neural Networks</li>
-        <li>Metaheuristic Optimization Algorithms</li>
-        <li>Computational Intelligence Systems</li>
-        <li>Signal Processing</li>
+        <li>LCADNet – EEG Alzheimer detection (2024)</li>
+        <li>LEADNet – Spatiotemporal EEG analysis (IEEE Access 2024)</li>
+        <li>Churn prediction with optimization (Scientific Reports 2023)</li>
+        <li>Feature selection using metaheuristics (Mathematics 2022)</li>
     </ul>
 </div>
 
-<!-- KEY CONTRIBUTIONS -->
+<!-- NETWORK -->
 <div class="section">
-    <h2>Key Contributions</h2>
-    <ul>
-        <li>Hybrid Metaheuristic Optimization Algorithms</li>
-        <li>AI Models for Healthcare Applications</li>
-        <li>Feature Selection using Evolutionary Algorithms</li>
-        <li>Deep Learning for Engineering Systems</li>
-    </ul>
+    <h2>Network</h2>
+    <div id="cy"></div>
 </div>
 
-<!-- TABS WRAPPER -->
-<div class="section">
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-    <div class="tabs">
-        <button class="tablink active" onclick="openTab(event,'network')">🌐 Network</button>
-        <button class="tablink" onclick="openTab(event,'projects')">🛠 Projects</button>
-        <button class="tablink" onclick="openTab(event,'output')">📄 Research Output</button>
-    </div>
+    window.cy = cytoscape({
+        container: document.getElementById('cy'),
 
-    <!-- NETWORK -->
-    <div id="network" class="tabcontent" style="display:block;">
-        <div id="cy"></div>
-    </div>
+        elements: [
+            { data: { id: 'me', label: 'Ibrahim' } },
+            { data: { id: 'ai', label: 'AI' } },
+            { data: { id: 'dl', label: 'Deep Learning' } },
 
-    <!-- PROJECTS -->
-    <div id="projects" class="tabcontent">
-        <div class="project-card">
-            <h4>AI Models for Healthcare</h4>
-            <p>EEG, COVID-19, Cancer Detection</p>
-        </div>
+            { data: { source: 'me', target: 'ai' } },
+            { data: { source: 'me', target: 'dl' } }
+        ],
 
-        <div class="project-card">
-            <h4>Feature Selection Systems</h4>
-            <p>Metaheuristic Optimization</p>
-        </div>
+        style: [
+            {
+                selector: 'node',
+                style: {
+                    label: 'data(label)',
+                    'text-valign': 'center',
+                    'text-halign': 'center',
+                    'background-color': '#fff',
+                    'border-width': 2,
+                    'border-color': '#999',
+                    width: 40,
+                    height: 40
+                }
+            },
+            {
+                selector: 'edge',
+                style: {
+                    width: 1,
+                    'line-color': '#ccc'
+                }
+            }
+        ],
 
-        <div class="project-card">
-            <h4>Deep Learning Systems</h4>
-            <p>Engineering Applications</p>
-        </div>
-    </div>
+        layout: { name: 'cose' }
+    });
 
-    <!-- OUTPUT -->
-    <div id="output" class="tabcontent">
-        <ul>
-            <li>LCADNet – EEG Alzheimer detection (2024)</li>
-            <li>LEADNet – EEG analysis (2024)</li>
-            <li>Churn prediction (2023)</li>
-            <li>Feature selection (2022)</li>
-        </ul>
-    </div>
+});
+</script>
 
-</div>
+</body>
+</html>
