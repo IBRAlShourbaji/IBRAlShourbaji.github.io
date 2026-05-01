@@ -6,23 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Al-Shourbaji Page</title>
 
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Cytoscape -->
     <script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
 
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
-            padding: 0;
             background: #f5f7fb;
-            text-align: center;
             color: #333;
+            text-align: center;
         }
 
         header {
@@ -36,17 +30,15 @@
             object-fit: cover;
         }
 
-        h1 { margin: 10px 0; }
+        .social-icons a {
+            margin: 0 8px;
+            color: #333;
+            font-size: 18px;
+        }
 
         .subtitle {
             font-size: 1.05em;
             margin-top: 10px;
-        }
-
-        .social-icons a {
-            margin: 0 8px;
-            font-size: 18px;
-            color: #333;
         }
 
         .section {
@@ -83,8 +75,6 @@
             background: #fff;
             border-radius: 12px;
         }
-
-        ul { line-height: 1.7; }
     </style>
 </head>
 
@@ -110,8 +100,7 @@
     <h2>About</h2>
     <p>
         Ibrahim AlShourbaji received the Ph.D. degree from the University of Hertfordshire, U.K.
-        He is currently with Jazan University, Saudi Arabia. His research includes AI, deep learning,
-        optimization, and biomedical signal analysis.
+        He is currently with Jazan University. His research includes AI, deep learning, optimization.
     </p>
 </div>
 
@@ -124,42 +113,39 @@
         <button class="tablink" onclick="showTab('output')">📄 Research Output</button>
     </div>
 
-    <!-- NETWORK -->
     <div id="network" class="tabcontent" style="display:block;">
         <div id="cy"></div>
     </div>
 
-    <!-- PROJECTS -->
     <div id="projects" class="tabcontent">
         <h3>Projects</h3>
         <ul>
-            <li>AI Models for Healthcare (EEG, COVID-19, Cancer Detection)</li>
-            <li>Feature Selection Systems using Metaheuristics</li>
-            <li>Deep Learning Engineering Applications</li>
+            <li>AI Models for Healthcare</li>
+            <li>Feature Selection Systems</li>
+            <li>Deep Learning Applications</li>
         </ul>
     </div>
 
-    <!-- OUTPUT -->
     <div id="output" class="tabcontent">
         <h3>Research Output</h3>
         <ul>
             <li>LCADNet – EEG Alzheimer detection (2024)</li>
             <li>LEADNet – Spatiotemporal EEG analysis (IEEE Access 2024)</li>
-            <li>Churn prediction with optimization (Scientific Reports 2023)</li>
-            <li>Feature selection using metaheuristics (Mathematics 2022)</li>
+            <li>Churn prediction (Scientific Reports 2023)</li>
+            <li>Feature selection (Mathematics 2022)</li>
         </ul>
     </div>
 
 </div>
 
 <script>
-function showTab(tab) {
-    document.querySelectorAll('.tabcontent').forEach(el => el.style.display = 'none');
-    document.getElementById(tab).style.display = 'block';
+function showTab(id){
+    document.querySelectorAll('.tabcontent').forEach(e=>e.style.display='none');
+    document.getElementById(id).style.display='block';
 }
 </script>
 
-<!-- NETWORK SCRIPT -->
+<!-- NETWORK -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
