@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Al-Shourbaji Page</title>
 
-    <!-- icons -->
+    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
@@ -15,27 +15,12 @@
     <!-- Cytoscape -->
     <script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Ibrahim Al-Shourbaji",
-      "url": "https://ibralshourbaji.github.io/",
-      "jobTitle": "Researcher",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Jazan University"
-      }
-    }
-    </script>
-
     <style>
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f7fb;
+            background: #f5f7fb;
             text-align: center;
             color: #333;
         }
@@ -45,17 +30,17 @@
         }
 
         .profile-image {
-            border-radius: 50%;
             width: 150px;
             height: 150px;
+            border-radius: 50%;
             object-fit: cover;
         }
 
         h1 { margin: 10px 0; }
 
         .subtitle {
-            margin-top: 10px;
             font-size: 1.05em;
+            margin-top: 10px;
         }
 
         .social-icons a {
@@ -65,20 +50,20 @@
         }
 
         .section {
-            text-align: left;
-            max-width: 800px;
+            max-width: 850px;
             margin: 20px auto;
             background: #fff;
             padding: 20px;
             border-radius: 12px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            text-align: left;
         }
 
         .tabs {
             display: flex;
             justify-content: center;
             gap: 10px;
-            margin-bottom: 20px;
+            margin: 20px 0;
             flex-wrap: wrap;
         }
 
@@ -86,24 +71,28 @@
             border: none;
             background: none;
             cursor: pointer;
-            padding: 10px;
+            padding: 10px 15px;
+            font-weight: 500;
         }
 
         .tabcontent { display: none; }
 
         #cy {
             width: 100%;
-            height: 450px;
+            height: 500px;
             background: #fff;
             border-radius: 12px;
         }
+
+        ul { line-height: 1.7; }
     </style>
 </head>
 
 <body>
 
 <header>
-    <img src="ibrahim2.jpg" class="profile-image">
+    <img src="https://raw.githubusercontent.com/IBRAlShourbaji/IBRAlShourbaji.github.io/main/ibrahim2.jpg" class="profile-image">
+
     <h1>Dr. Ibrahim Al-Shourbaji</h1>
 
     <div class="social-icons">
@@ -121,27 +110,56 @@
     <h2>About</h2>
     <p>
         Ibrahim AlShourbaji received the Ph.D. degree from the University of Hertfordshire, U.K.
-        He is currently with Jazan University. His research includes AI, optimization, and deep learning.
+        He is currently with Jazan University, Saudi Arabia. His research includes AI, deep learning,
+        optimization, and biomedical signal analysis.
     </p>
 </div>
 
-<!-- OUTPUT (FIXED HERE) -->
+<!-- TABS -->
 <div class="section">
-    <h2>Research Output</h2>
-    <ul>
-        <li>LCADNet – EEG Alzheimer detection (2024)</li>
-        <li>LEADNet – Spatiotemporal EEG analysis (IEEE Access 2024)</li>
-        <li>Churn prediction with optimization (Scientific Reports 2023)</li>
-        <li>Feature selection using metaheuristics (Mathematics 2022)</li>
-    </ul>
+
+    <div class="tabs">
+        <button class="tablink" onclick="showTab('network')">🌐 Network</button>
+        <button class="tablink" onclick="showTab('projects')">🛠 Projects</button>
+        <button class="tablink" onclick="showTab('output')">📄 Research Output</button>
+    </div>
+
+    <!-- NETWORK -->
+    <div id="network" class="tabcontent" style="display:block;">
+        <div id="cy"></div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div id="projects" class="tabcontent">
+        <h3>Projects</h3>
+        <ul>
+            <li>AI Models for Healthcare (EEG, COVID-19, Cancer Detection)</li>
+            <li>Feature Selection Systems using Metaheuristics</li>
+            <li>Deep Learning Engineering Applications</li>
+        </ul>
+    </div>
+
+    <!-- OUTPUT -->
+    <div id="output" class="tabcontent">
+        <h3>Research Output</h3>
+        <ul>
+            <li>LCADNet – EEG Alzheimer detection (2024)</li>
+            <li>LEADNet – Spatiotemporal EEG analysis (IEEE Access 2024)</li>
+            <li>Churn prediction with optimization (Scientific Reports 2023)</li>
+            <li>Feature selection using metaheuristics (Mathematics 2022)</li>
+        </ul>
+    </div>
+
 </div>
 
-<!-- NETWORK -->
-<div class="section">
-    <h2>Network</h2>
-    <div id="cy"></div>
-</div>
+<script>
+function showTab(tab) {
+    document.querySelectorAll('.tabcontent').forEach(el => el.style.display = 'none');
+    document.getElementById(tab).style.display = 'block';
+}
+</script>
 
+<!-- NETWORK SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -167,8 +185,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     'background-color': '#fff',
                     'border-width': 2,
                     'border-color': '#999',
-                    width: 40,
-                    height: 40
+                    width: 45,
+                    height: 45
                 }
             },
             {
