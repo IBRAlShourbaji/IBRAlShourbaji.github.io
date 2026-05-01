@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Al-Shourbaji Page</title>
 
-    <!-- icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Cytoscape -->
     <script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
 
 <style>
@@ -67,6 +63,7 @@ header { margin-top: 60px; }
     background: none;
     cursor: pointer;
     padding: 10px;
+    font-size: 14px;
 }
 
 .tabcontent {
@@ -75,7 +72,7 @@ header { margin-top: 60px; }
 
 #cy {
     width: 100%;
-    height: 450px;
+    height: 500px;
     background: #fff;
     border-radius: 12px;
 }
@@ -102,11 +99,12 @@ header { margin-top: 60px; }
 <div class="section">
     <h2>About</h2>
     <p>
-        Ibrahim AlShourbaji is a researcher at Jazan University. His work focuses on AI, optimization, and deep learning.
+        Ibrahim AlShourbaji received the Ph.D. from University of Hertfordshire, U.K.
+        He works at Jazan University. His research includes AI, optimization, and deep learning.
     </p>
 </div>
 
-<!-- RESEARCH -->
+<!-- RESEARCH FOCUS -->
 <div class="section">
     <h2>Research Focus</h2>
     <ul>
@@ -117,7 +115,7 @@ header { margin-top: 60px; }
     </ul>
 </div>
 
-<!-- TABS -->
+<!-- NETWORK + TABS -->
 <div class="section">
 
 <div class="tabs">
@@ -136,24 +134,24 @@ header { margin-top: 60px; }
 
 <div id="output" class="tabcontent">
     <ul>
-        <li>LCADNet 2024</li>
-        <li>LEADNet 2024</li>
-        <li>Churn Prediction 2023</li>
-        <li>Feature Selection 2022</li>
+        <li>LCADNet – 2024</li>
+        <li>LEADNet – 2024</li>
+        <li>Churn Prediction – 2023</li>
+        <li>Feature Selection – 2022</li>
     </ul>
 </div>
 
 </div>
 
 <script>
-function openTab(id) {
-    document.querySelectorAll('.tabcontent').forEach(el => el.style.display = 'none');
-    document.getElementById(id).style.display = 'block';
+function openTab(id){
+    document.querySelectorAll('.tabcontent').forEach(e => e.style.display='none');
+    document.getElementById(id).style.display='block';
 }
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    cy = cytoscape({
+    cytoscape({
         container: document.getElementById('cy'),
 
         elements: [
