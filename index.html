@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Al-Shourbaji Page</title>
 
-    <!-- Icons -->
+    <!-- icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <!-- Google Fonts -->
@@ -57,7 +57,10 @@
             margin-bottom: 15px;
         }
 
-        h1 { font-size: 2em; margin: 0; }
+        h1 {
+            font-size: 2em;
+            margin: 0;
+        }
 
         .section {
             text-align: left;
@@ -92,14 +95,8 @@
             font-weight: bold;
         }
 
-        .tabcontent { display: none; }
-
-        .project-card {
-            background: #f8f9fa;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-left: 4px solid #2c7be5;
-            border-radius: 10px;
+        .tabcontent {
+            display: none;
         }
 
         #cy {
@@ -131,10 +128,10 @@
 <!-- ABOUT -->
 <div class="section">
     <h2>About</h2>
-    <p>Researcher in AI, Deep Learning, and Optimization.</p>
+    <p>Researcher in AI, Deep Learning, Optimization.</p>
 </div>
 
-<!-- OUTPUT -->
+<!-- TABS -->
 <div class="section">
 
     <div class="tabs">
@@ -150,9 +147,7 @@
 
     <!-- PROJECTS -->
     <div id="projects" class="tabcontent">
-        <div class="project-card">AI Healthcare Models</div>
-        <div class="project-card">Feature Selection Systems</div>
-        <div class="project-card">Deep Learning Systems</div>
+        <p>AI Healthcare, Feature Selection, Deep Learning Systems</p>
     </div>
 
     <!-- OUTPUT -->
@@ -164,9 +159,10 @@
             <li>Feature selection (2022)</li>
         </ul>
     </div>
+
 </div>
 
-<!-- NETWORK SCRIPT (FIXED PLACE) -->
+<!-- NETWORK SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -221,14 +217,6 @@ document.addEventListener("DOMContentLoaded", function () {
             padding: 20
         }
     });
-
-    // Tabs
-    window.openTab = function(evt, tab) {
-        document.querySelectorAll('.tabcontent').forEach(t => t.style.display='none');
-        document.querySelectorAll('.tablink').forEach(b => b.classList.remove('active'));
-        document.getElementById(tab).style.display='block';
-        evt.currentTarget.classList.add('active');
-    };
 
 });
 </script>
