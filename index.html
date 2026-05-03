@@ -48,21 +48,55 @@ body {
     margin-bottom: 10px;
 }
 
-/* SOCIAL ICONS */
+/* SOCIAL ICONS - UPDATED */
 .social-icons {
     margin-top: 20px;
 }
 
 .social-icons a {
-    margin-right: 14px;
-    font-size: 20px;
-    color: #555;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
     transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
 }
 
+/* Hover effect */
 .social-icons a:hover {
-    color: #2563eb;
-    transform: translateY(-2px);
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* COLORS */
+.social-icons a:nth-child(1) {
+    background: linear-gradient(135deg, #ff512f, #dd2476); /* Email */
+}
+
+.social-icons a:nth-child(2) {
+    background: linear-gradient(135deg, #4285f4, #34a853); /* Scholar */
+}
+
+.social-icons a:nth-child(3) {
+    background: linear-gradient(135deg, #00ccbb, #00796b); /* ResearchGate */
+}
+
+.social-icons a:nth-child(4) {
+    background: linear-gradient(135deg, #a6ce39, #6aa84f); /* ORCID */
+}
+
+.social-icons a:nth-child(5) {
+    background: linear-gradient(135deg, #333333, #000000); /* GitHub */
+}
+
+.social-icons a:nth-child(6) {
+    background: linear-gradient(135deg, #0077b5, #00a0dc); /* LinkedIn */
 }
 
 /* IMAGE RIGHT */
@@ -98,7 +132,7 @@ body {
     }
 
     .social-icons a {
-        margin: 0 8px;
+        margin: 6px;
     }
 }
 </style>
@@ -126,6 +160,13 @@ body {
             <a href="https://www.linkedin.com/in/ibrahim-alshourbaji-6a0666199" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </div>
+
+    <!-- IMAGE -->
+    <div class="hero-image">
+        <img src="ibrahim2.jpg" alt="Ibrahim Al-Shourbaji">
+    </div>
+
+</section>
 
     <!-- IMAGE -->
     <div class="hero-image">
