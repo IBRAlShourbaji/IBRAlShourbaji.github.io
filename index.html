@@ -14,30 +14,60 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     background-color: #f5f7fb;
-    text-align: center;
 }
 
-header {
-    margin-top: 100px;
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    background: #f5f7fb;
+    flex-wrap: wrap;
 }
 
-.profile-image {
-    border-radius: 50%;
-    width: 150px;
+/* TEXT LEFT */
+.hero-text {
+    max-width: 500px;
 }
 
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.hero-text h2 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* IMAGE RIGHT */
+.hero-image img {
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* BUTTONS */
 .buttons {
     display: flex;
-    justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
-    margin: 20px;
+    margin-top: 20px;
 }
 
 .button {
     padding: 10px 20px;
     border-radius: 30px;
-    background: #fff;
+    background: white;
     border: 1px solid #ddd;
     text-decoration: none;
     color: #333;
@@ -49,13 +79,13 @@ header {
     color: white;
 }
 
+/* SECTIONS */
 .section {
     max-width: 900px;
     margin: 40px auto;
     background: white;
     padding: 25px;
     border-radius: 12px;
-    text-align: left;
 }
 
 .section h2 {
@@ -63,20 +93,48 @@ header {
     padding-bottom: 10px;
 }
 
-.section ul {
-    padding-left: 20px;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <img src="ibrahim2.jpg" class="profile-image">
-    <h1>Dr. Ibrahim Al-Shourbaji</h1>
-    <p>Intelligent Optimization and Advanced Artificial Intelligence Systems</p>
-    <p>Jazan University, Saudi Arabia</p>
-</header>
+<!-- HERO SECTION -->
+<section class="hero">
+    
+    <!-- TEXT -->
+    <div class="hero-text">
+        <h1>Dr. Ibrahim Al-Shourbaji</h1>
+        <h2>Artificial Intelligence & Optimization Researcher</h2>
+        <p>Assistant Professor at Jazan University, Saudi Arabia</p>
+        <p>Developing intelligent optimization algorithms and AI-driven solutions for complex real-world problems.</p>
+
+        <div class="buttons">
+            <a href="#" class="button"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+            <a href="#" class="button"><i class="fab fa-researchgate"></i> ResearchGate</a>
+            <a href="#" class="button"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+    </div>
+
+    <!-- IMAGE -->
+    <div class="hero-image">
+        <img src="ibrahim2.jpg" alt="Ibrahim Al-Shourbaji">
+    </div>
+
+</section>
+
+</body>
+</html>
 
 <div class="buttons">
     <a href="mailto:alshourbajiibrahim@gmail.com" class="button"><i class="fas fa-envelope"></i> Email</a>
