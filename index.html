@@ -22,13 +22,12 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 80px 10%;
-    background: #f5f7fb;
     flex-wrap: wrap;
 }
 
 /* TEXT LEFT */
 .hero-text {
-    max-width: 500px;
+    max-width: 520px;
 }
 
 .hero-text h1 {
@@ -40,7 +39,7 @@ body {
 .hero-text h2 {
     font-size: 20px;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .hero-text p {
@@ -49,34 +48,28 @@ body {
     margin-bottom: 10px;
 }
 
+/* SOCIAL ICONS */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin-right: 14px;
+    font-size: 20px;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #2563eb;
+    transform: translateY(-2px);
+}
+
 /* IMAGE RIGHT */
 .hero-image img {
     width: 280px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* BUTTONS */
-.buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.button {
-    padding: 10px 20px;
-    border-radius: 30px;
-    background: white;
-    border: 1px solid #ddd;
-    text-decoration: none;
-    color: #333;
-    transition: 0.3s;
-}
-
-.button:hover {
-    background: #2563eb;
-    color: white;
 }
 
 /* SECTIONS */
@@ -103,6 +96,10 @@ body {
     .hero-image {
         margin-top: 30px;
     }
+
+    .social-icons a {
+        margin: 0 8px;
+    }
 }
 </style>
 </head>
@@ -119,10 +116,14 @@ body {
         <p>Assistant Professor at Jazan University, Saudi Arabia</p>
         <p>Developing intelligent optimization algorithms and AI-driven solutions for complex real-world problems.</p>
 
-        <div class="buttons">
-            <a href="#" class="button"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-            <a href="#" class="button"><i class="fab fa-researchgate"></i> ResearchGate</a>
-            <a href="#" class="button"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <!-- ICONS ONLY -->
+        <div class="social-icons">
+            <a href="mailto:alshourbajiibrahim@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://scholar.google.com/citations?user=T4jhEMQAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://www.researchgate.net/profile/Ibrahim-Alshourbaji-2" target="_blank"><i class="fab fa-researchgate"></i></a>
+            <a href="https://orcid.org/0000-0002-6458-8415" target="_blank"><i class="fas fa-id-badge"></i></a>
+            <a href="https://github.com/IBRAlShourbaji" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ibrahim-alshourbaji-6a0666199" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </div>
 
@@ -135,15 +136,6 @@ body {
 
 </body>
 </html>
-
-<div class="buttons">
-    <a href="mailto:alshourbajiibrahim@gmail.com" class="button"><i class="fas fa-envelope"></i> Email</a>
-    <a href="https://scholar.google.com/citations?user=T4jhEMQAAAAJ&hl=en" class="button" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-    <a href="https://www.researchgate.net/profile/Ibrahim-Alshourbaji-2" class="button" target="_blank"><i class="fas fa-book"></i> ResearchGate</a>
-    <a href="https://orcid.org/0000-0002-6458-8415" class="button" target="_blank"><i class="fas fa-id-badge"></i> ORCID</a>
-    <a href="https://github.com/IBRAlShourbaji" class="button" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-    <a href="https://www.linkedin.com/in/ibrahim-alshourbaji-6a0666199" class="button" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-</div>
 
 <div class="section">
 <h2>About</h2>
