@@ -14,24 +14,44 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     background-color: #f5f7fb;
+    scroll-behavior: smooth;
 }
 
-/* HERO SECTION */
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 12px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.navbar a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* HERO */
 .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 60px 10% 30px;
+    padding: 70px 10% 40px;
     flex-wrap: wrap;
 }
 
-/* TEXT LEFT */
 .hero-text {
     max-width: 520px;
 }
 
 .hero-text h1 {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 10px;
     color: #222;
 }
@@ -46,6 +66,7 @@ body {
     font-size: 16px;
     color: #666;
     margin-bottom: 10px;
+    line-height: 1.6;
 }
 
 /* SOCIAL ICONS */
@@ -68,25 +89,35 @@ body {
     box-shadow: 0 6px 15px rgba(0,0,0,0.12);
 }
 
-/* Hover */
 .social-icons a:hover {
     transform: translateY(-5px) scale(1.08);
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* COLORS */
-.social-icons a:nth-child(1) { background: linear-gradient(135deg, #ff512f, #dd2476); }
-.social-icons a:nth-child(2) { background: linear-gradient(135deg, #4285f4, #34a853); }
-.social-icons a:nth-child(3) { background: linear-gradient(135deg, #00ccbb, #00796b); }
-.social-icons a:nth-child(4) { background: linear-gradient(135deg, #a6ce39, #6aa84f); }
-.social-icons a:nth-child(5) { background: linear-gradient(135deg, #333333, #000000); }
-.social-icons a:nth-child(6) { background: linear-gradient(135deg, #0077b5, #00a0dc); }
+.social-icons a:nth-child(1){background:linear-gradient(135deg,#ff512f,#dd2476);}
+.social-icons a:nth-child(2){background:linear-gradient(135deg,#4285f4,#34a853);}
+.social-icons a:nth-child(3){background:linear-gradient(135deg,#00ccbb,#00796b);}
+.social-icons a:nth-child(4){background:linear-gradient(135deg,#a6ce39,#6aa84f);}
+.social-icons a:nth-child(5){background:linear-gradient(135deg,#333,#000);}
+.social-icons a:nth-child(6){background:linear-gradient(135deg,#0077b5,#00a0dc);}
 
 /* IMAGE */
 .hero-image img {
     width: 360px;
     border-radius: 60px;
     box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    border: 4px solid white;
+}
+
+/* BUTTON */
+.cv-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
 }
 
 /* SECTIONS */
@@ -96,6 +127,12 @@ body {
     background: white;
     padding: 25px;
     border-radius: 12px;
+    transition: 0.3s;
+}
+
+.section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .section h2 {
@@ -114,8 +151,12 @@ body {
         margin-top: 30px;
     }
 
-    .social-icons a {
-        margin: 6px;
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        margin: 5px;
     }
 }
 </style>
@@ -123,7 +164,17 @@ body {
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- NAVBAR -->
+<div class="navbar">
+    <div><strong>Dr. Ibrahim</strong></div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#contributions">Contributions</a>
+    </div>
+</div>
+
+<!-- HERO -->
 <section class="hero">
 
     <div class="hero-text">
@@ -132,31 +183,32 @@ body {
         <p>Assistant Professor at Jazan University, Saudi Arabia</p>
         <p>Developing intelligent optimization algorithms and AI-driven solutions for complex real-world problems.</p>
 
+        <a class="cv-btn" href="#">Download CV</a>
+
         <div class="social-icons">
             <a href="mailto:alshourbajiibrahim@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=T4jhEMQAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://www.researchgate.net/profile/Ibrahim-Alshourbaji-2" target="_blank"><i class="fab fa-researchgate"></i></a>
-            <a href="https://orcid.org/0000-0002-6458-8415" target="_blank"><i class="fas fa-id-badge"></i></a>
-            <a href="https://github.com/IBRAlShourbaji" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/ibrahim-alshourbaji-6a0666199" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?user=T4jhEMQAAAAJ&hl=en"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://www.researchgate.net/profile/Ibrahim-Alshourbaji-2"><i class="fab fa-researchgate"></i></a>
+            <a href="https://orcid.org/0000-0002-6458-8415"><i class="fas fa-id-badge"></i></a>
+            <a href="https://github.com/IBRAlShourbaji"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ibrahim-alshourbaji-6a0666199"><i class="fab fa-linkedin"></i></a>
         </div>
     </div>
 
     <div class="hero-image">
-        <img src="ibrahim2.jpg" alt="Ibrahim Al-Shourbaji">
+        <img src="ibrahim2.jpg" alt="Ibrahim">
     </div>
 
 </section>
 
 <!-- ABOUT -->
-<div class="section">
+<div class="section" id="about">
 <h2>About</h2>
-<p>
-Dr. Ibrahim Al-Shourbaji received his Ph.D. in Artificial Intelligence and Optimization from the University of Hertfordshire, U.K., and is currently an Assistant Professor at Jazan University, Saudi Arabia. His research lies at the intersection of Artificial Intelligence, metaheuristic optimization, and deep learning, with a focus on developing intelligent and efficient algorithms for complex real-world problems, particularly in healthcare and signal processing. He has published in leading international journals and actively contributes to the scientific community as a reviewer for top-tier publishers, including Elsevier, Springer, and IEEE.
-</p>
+<p>Dr. Ibrahim Al-Shourbaji received his Ph.D. in Artificial Intelligence and Optimization from the University of Hertfordshire, U.K.</p>
 </div>
 
-<div class="section">
+<!-- RESEARCH -->
+<div class="section" id="research">
 <h2>Research Focus</h2>
 <ul>
 <li>Artificial Intelligence & Machine Learning</li>
@@ -167,13 +219,14 @@ Dr. Ibrahim Al-Shourbaji received his Ph.D. in Artificial Intelligence and Optim
 </ul>
 </div>
 
-<div class="section">
+<!-- CONTRIBUTIONS -->
+<div class="section" id="contributions">
 <h2>Key Contributions</h2>
 <ul>
 <li>Hybrid Metaheuristic Optimization Algorithms</li>
-<li>AI for Healthcare (EEG, COVID-19)</li>
+<li>AI for Healthcare</li>
 <li>Feature Selection Techniques</li>
-<li>Deep Learning for Engineering Applications</li>
+<li>Deep Learning Applications</li>
 </ul>
 </div>
 
